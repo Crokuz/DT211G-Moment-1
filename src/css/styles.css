@@ -1,0 +1,196 @@
+/*
+Författare: Leander Norberg
+Projketnamn: Moment 1
+Beskrivning: Automatisering & publicering, 
+Frontend-baserad webbutveckling (DT211G) VT26
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+	margin: 0; 
+    padding: 0;
+	background-color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    font-family: "Open Sans", sans-serif;
+	font-size: 18px;
+	font-weight: lighter;
+	line-height: 1.5em;
+	color: black;
+}
+
+span{
+    font-weight: 600;   
+}
+
+a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+	font-weight: 600;
+    color: #262262;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #45005C;
+}
+
+h1, h2, h3 {
+    font-family: "Noto Sans", sans-serif;
+	font-weight: 600;
+    font-size: 28px;
+    text-align: left;
+    color: black;
+}
+
+h1 {
+    margin: 0 0 0 10px;
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    color: black;
+}
+
+header {
+    margin: 0; 
+    padding: 0 10vw 0 10vw;
+    display: flex;
+    background-color: white;
+    align-items: center; 
+    box-shadow: 0px 0px 10px 0px rgb(54, 54, 54);
+    position: relative;
+}
+
+nav {
+    margin: auto;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: auto;
+}
+
+li a, li a:visited {
+    color: black;
+}
+
+li a:hover {
+    border-bottom: 1px solid black;
+}
+
+#navWrapper {
+    display: flex;         
+    justify-content: flex-end;
+    padding: 0;
+    margin-left: auto;
+}
+
+.mainWrapper {
+    flex: 1;
+}
+
+.menuButton p {
+    margin: 0;
+}
+
+.menuIcon {
+    position: relative;
+    width: 20px; 
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar {
+    position: absolute;
+    width: 3px;
+    height: 15px;
+    background-color: black;
+}
+
+#closeButton .bar:first-child {
+    transform: rotate(45deg);
+}
+
+#closeButton .bar:last-child {
+    transform: rotate(-45deg);
+}
+
+#openButton .bar {
+    width: 15px;
+    height: 3px;
+    position: relative;
+}
+
+#openButton .menuIcon {
+    justify-content: space-between;
+    flex-direction: column;
+    height: 15px;
+}
+
+footer {
+    padding: 3em 0;
+    text-align: center;
+    background-color: #45005C;
+}
+
+footer p{
+    font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	font-weight: lighter;
+    color: white;
+	line-height: 1.5em;
+}
+
+@media only screen and (max-width: 1400px) {
+    nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: none;
+        height: 90vh;
+        width: 250px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0px 0px 10px 0px rgb(54, 54, 54);
+    }
+
+    ul {
+        margin-top: 30px;
+        display: block;
+        line-height: 2em;
+    }    
+
+    .menuButton {
+        display: flex;
+    }
+  }
+
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
