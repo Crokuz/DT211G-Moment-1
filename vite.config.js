@@ -7,7 +7,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 gallery: resolve(__dirname, 'gallery.html'),
-                about: resolve(__dirname, 'about.html')
+                work: resolve(__dirname, 'work.html')
             },
         },
     },

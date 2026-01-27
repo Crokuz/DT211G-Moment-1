@@ -16,16 +16,12 @@ body {
     flex-direction: column;
 }
 
-p{
+p, .menuButton{
     font-family: "Open Sans", sans-serif;
 	font-size: 18px;
 	font-weight: lighter;
 	line-height: 1.5em;
 	color: black;
-}
-
-span{
-    font-weight: 600;   
 }
 
 a {
@@ -40,7 +36,7 @@ a:visited {
     color: #45005C;
 }
 
-h1, h2, h3 {
+h1, h2{
     font-family: "Noto Sans", sans-serif;
 	font-weight: 600;
     font-size: 28px;
@@ -48,23 +44,14 @@ h1, h2, h3 {
     color: black;
 }
 
-h1 {
-    margin: 0 0 0 10px;
-}
-
 h2 {
     font-size: 36px;
     text-align: center;
 }
 
-h3 {
-    font-size: 20px;
-    color: black;
-}
-
 header {
     margin: 0; 
-    padding: 0 10vw 0 10vw;
+    padding: 0 10vw;
     display: flex;
     background-color: white;
     align-items: center; 
@@ -73,7 +60,11 @@ header {
 }
 
 nav {
-    margin: auto;
+    margin-left: auto;
+}
+
+section{
+    padding: 100px 35vw;
 }
 
 ul {
@@ -93,67 +84,26 @@ li a, li a:visited {
 }
 
 li a:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
 }
 
-#navWrapper {
-    display: flex;         
-    justify-content: flex-end;
-    padding: 0;
+.menuButton {
     margin-left: auto;
-}
-
-.mainWrapper {
-    flex: 1;
-}
-
-.menuButton p {
-    margin: 0;
-}
-
-.menuIcon {
-    position: relative;
-    width: 20px; 
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bar {
-    position: absolute;
-    width: 3px;
-    height: 15px;
-    background-color: black;
-}
-
-#closeButton .bar:first-child {
-    transform: rotate(45deg);
-}
-
-#closeButton .bar:last-child {
-    transform: rotate(-45deg);
-}
-
-#openButton .bar {
-    width: 15px;
-    height: 3px;
-    position: relative;
-}
-
-#openButton .menuIcon {
-    justify-content: space-between;
-    flex-direction: column;
-    height: 15px;
+    display: none;
+    background: none;
+    border: none;
+	font-weight: bold;
+    cursor: pointer;
 }
 
 footer {
+    margin-top: auto;
     padding: 3em 0;
     text-align: center;
     background-color: #45005C;
 }
 
-footer p{
+footer p {
     font-family: "Open Sans", sans-serif;
 	font-size: 16px;
 	font-weight: lighter;
@@ -162,16 +112,24 @@ footer p{
 }
 
 @media only screen and (max-width: 1400px) {
+    .menuButton {
+        display: block;
+    }
+
     nav {
         position: absolute;
         right: 0;
-        top: 0;
+        top: 130%;
         display: none;
-        height: 90vh;
-        width: 250px;
+        height: 60vh;
+        width: 200px;
         background-color: white;
         padding: 20px;
         box-shadow: 0px 0px 10px 0px rgb(54, 54, 54);
+    }
+
+    nav.open {
+        display: block;
     }
 
     ul {
@@ -180,14 +138,18 @@ footer p{
         line-height: 2em;
     }    
 
-    .menuButton {
-        display: flex;
+    section {
+        padding: 100px 20vw;
     }
   }
 
 @media only screen and (max-width: 900px) {
     header {
         padding: 0 10px;
+    }
+
+    section {
+        padding: 20px 10px;
     }
 
     h1 {

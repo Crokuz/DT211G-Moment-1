@@ -6,20 +6,12 @@ Frontend-baserad webbutveckling (DT211G) VT26
 */
 "use strict";
 
-let openMenu = document.getElementById("openButton");
-let closeMenu = document.getElementById("closeButton");
+const menuButton = document.querySelector(".menuButton");
+const nav = document.querySelector("nav");
 
-openMenu.addEventListener('click', toggleMenu);
-closeMenu.addEventListener('click', toggleMenu);
+menuButton.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
 
-//Funktion för att öppna och stänga menyn 
-function toggleMenu() {
-    let navMenu = document.getElementById("navMenu");
-    let style = window.getComputedStyle(navMenu);
-
-    if(style.display === "none") {
-        navMenu.style.display = "block";
-    } else {
-        navMenu.style.display = "none";
-    }
-}
+    menuButton.textContent = isOpen ? "✕ Stäng" : "☰ Meny";
+    menuButton.setAttribute("aria-expanded", isOpen);
+});
