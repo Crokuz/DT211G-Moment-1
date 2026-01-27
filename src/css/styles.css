@@ -6,10 +6,14 @@ Frontend-baserad webbutveckling (DT211G) VT26
 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+html {
+  overflow-y: scroll;
+}
+
 body {
 	margin: 0; 
     padding: 0;
-	background-color: white;
+	background-color: #fdf4ed;
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
@@ -31,14 +35,10 @@ figcaption {
 
 a {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 	font-weight: 600;
-    color: #262262;
+    color: black;
     text-decoration: none;
-}
-
-a:visited {
-    color: #45005C;
 }
 
 h1, h2{
@@ -49,6 +49,10 @@ h1, h2{
     color: black;
 }
 
+h1 span {
+    color: #1320a0;
+}
+
 h2 {
     font-size: 36px;
     text-align: center;
@@ -56,11 +60,10 @@ h2 {
 
 header {
     margin: 0; 
-    padding: 0 10vw;
+    padding: 0 25vw;
     display: flex;
-    background-color: white;
-    align-items: center; 
-    box-shadow: 0px 0px 10px 0px rgb(54, 54, 54);
+    background-color: #fdf4ed;
+    align-items: center;
     position: relative;
 }
 
@@ -68,16 +71,13 @@ nav {
     margin-left: auto;
 }
 
-section{
-    padding: 100px 35vw;
-}
-
 ul {
     display: flex;
     gap: 20px;
     list-style: none;
-    margin: 0;
+    margin: 0 0 0 1em;
     padding: 0;
+    text-transform: uppercase;
 }
 
 li {
@@ -93,9 +93,12 @@ li a:hover {
 }
 
 figure {
-    padding: 0 0 1em 0;
-    margin: 0;
+    padding: 0;
+    margin: 0 0 5em 0;
+}
 
+section figure:last-of-type {
+    margin: 0;
 }
 
 .menuButton {
@@ -105,6 +108,15 @@ figure {
     border: none;
 	font-weight: bold;
     cursor: pointer;
+    font-size: 15px;
+}
+
+.textContent {
+    padding: 100px 35vw;  
+}
+
+.mediaContent {
+    padding: 100px 25vw;  
 }
 
 .mediaContent img {
@@ -115,7 +127,7 @@ footer {
     margin-top: auto;
     padding: 3em 0;
     text-align: center;
-    background-color: #45005C;
+    background-color: #1320a0;
 }
 
 footer p {
@@ -133,14 +145,13 @@ footer p {
 
     nav {
         position: absolute;
-        right: 0;
-        top: 130%;
+        right: 0px;
+        top: 100%;
         display: none;
-        height: 60vh;
-        width: 200px;
-        background-color: white;
-        padding: 20px;
-        box-shadow: 0px 0px 10px 0px rgb(54, 54, 54);
+        height: 70vh;
+        width: 25vw;
+        background-color: #fff8f3;
+        padding: 2em;
     }
 
     nav.open {
@@ -148,13 +159,20 @@ footer p {
     }
 
     ul {
-        margin-top: 30px;
         display: block;
         line-height: 2em;
-    }    
+    }  
+    
+    .mediaContent {
+        padding: 100px 10vw;  
+    }
 
-    section {
-        padding: 100px 20vw;
+    .textContent {
+        padding: 100px 20vw;  
+    }
+
+    header {
+        padding: 0 10vw;
     }
   }
 
@@ -163,8 +181,17 @@ footer p {
         padding: 0 10px;
     }
 
-    section {
-        padding: 20px 10px;
+    nav {
+        width: 100vw; 
+        padding: 2em 0em;  
+    }
+
+    ul {
+        margin-left: 2em;
+    }
+
+    .textContent, .mediaContent {
+        padding: 20px 10vw;  
     }
 
     h1 {

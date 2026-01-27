@@ -12,6 +12,6 @@ const nav = document.querySelector("nav");
 menuButton.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("open");
 
-    menuButton.textContent = isOpen ? "✕ Stäng" : "☰ Meny";
+    menuButton.textContent = isOpen ? "✕ MENY" : "☰ MENY";
     menuButton.setAttribute("aria-expanded", isOpen);
 });
