@@ -24,7 +24,11 @@
 
         <section class="textContent">
             <h2>Uppgiftens arbetsprocess</h2>
-            
+            <p>Projektet startar med att använda NodeJs och Vite för att automatiskt bygga en grundstruktur där källkoden och andra tillhörande filer kan skapas. Vite används även för att automatiskt optimera och komprimera samtliga filer innan publicering. Individuella kataloger skapas sedan för CSS och JavaScript samt en katalog för bilder som ska finnas med på sidan. När strukturen är färdigställd börjar själva utvecklingsprocessen.</p>
+            <p>Webbplatsen består av en startsidan och två undersidor. På startsidan finns information om projektet och dess syfte. En av undersidorna beskriver projektets arbetsprocess och en annan innehåller ett bildgalleri. Vite har en lokal server öppen där förändringar i koden automatiskt visas på webbplatsen. Detta underlättar utvecklingsprocessen avsevärt eftersom eventuella fel snabbare kan upptäckas. Samtliga uppdateringar i projektet sparas regelbundet till Github för versionshantering.</p> 
+            <p>När utvecklingsfasen är klar kopieras projektet till en ny gren på Github för testning. Detta steg är egentligen är mer relevant i större projekt med kunder, projekledare och testgrupper men det är ändå en bra vana att testköra mindre applikationer. Eventuella ändringar som gjorts flyttas sedan tillsammans med resten av projektet till en tredje gren för publicering.</p>
+            <p>För att projektfilerna ska vara så optimerade som möjligt installeras även ett plugin för bildoptimering. För detta projekt användes bilder i filformatet WebP som redan är ett modernt och optimerat format för bilder på internet. Trots detta kunde varje bild i snitt reduceras med 8,4% i filstorlek. Netlify används slutligen för att publicera webbplatsen. Detta görs genom att koppla tjänsten till publiceringsgrenen på Github. Eventuella ändringar som läggs till i grenen på Github kommer nu automatiskt publiceras på Netlify.</p>   
+
         </section>
 
         <footer>
